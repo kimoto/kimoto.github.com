@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>spraymaker</title>
+
+  <style type="text/css">
+    body {
+      margin-top: 1.0em;
+      background-color: #FFFFFF;
+      font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+      color: #000;
+      font-style: sans-serif;
+    }
+    #container {
+      margin: 0 auto;
+      width: 900px;
+    }
+    h1 { font-size: 3.8em; color: #53b2bb; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #53b2bb; }
+    h3 { text-align: center; color: #53b2bb; }
+    a { color: #53b2bb; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; }
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+  </style>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22814448-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+
+<body>
+  <a href="http://github.com/kimoto/spraymaker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+    <h1><a href="http://github.com/kimoto/spraymaker">Gauss</a> <img src="images/gauss.png"></h1>
+
+    <div class="description">
+      Easy to create high quality VTF file for Valve SourceEngine Games.<br />
+      you can drag &amp; drop any image files to spraymaker.exe
+    </div>
+
+    <h2>Download</h2>
+    <ul>
+    	<li>
+    		Windows7(32/64bit): <a href="http://kimoto29.sakura.ne.jp/misc/spraymaker(20110619).zip">spraymaker(20110619).zip</a><br />
+        not test other environment. but maybe working.
+    	</li>
+    </ul>
+    
+    <h2>Description</h2>
+    <ul>
+      <li>output 256 x 256 size spray</li>
+      <li>output alpha channel VTF file(BGRA8888 = high quality compression type)</li>
+      <li>add high quality VTF option(NOMAP, NOLOD)</li>
+      <li>read can 200 over image types</li>
+      <li>keep original image aspect ratio(auto padding transparent pixel)</li>
+      <li>read can directory (recursive convertion)</li>
+    </ul>
+
+    <h2>Usage</h2>
+    <p>
+    タスクトレイに常駐するので右クリックメニューから詳細な設定を行います<br />
+    執筆中です...
+    </p>
+
+    <div class="footer">
+      Author: kimoto (peerler at gmail dot com)
+    </div>
+  </div>
+</body>
+</html>
