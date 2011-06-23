@@ -2,33 +2,8 @@
 <html>
   <head>
     <meta charset='utf-8'>
-
     <title>spraymaker</title>
-
-    <style type="text/css">
-      body {
-        margin-top: 1.0em;
-        background-color: #FFFFFF;
-        font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-        color: #000;
-        font-style: sans-serif;
-      }
-      #container {
-        margin: 0 auto;
-        width: 900px;
-      }
-      h1 { font-size: 3.8em; color: #53b2bb; margin-bottom: 3px; }
-      h1 .small { font-size: 0.4em; }
-      h1 a { text-decoration: none }
-      h2 { font-size: 1.5em; color: #53b2bb; }
-      h3 { text-align: center; color: #53b2bb; }
-      a { color: #53b2bb; }
-      .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; }
-      .download { float: right; }
-      pre { background: #000; color: #fff; padding: 15px;}
-      hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-      .footer { text-align:center; padding-top:30px; font-style: italic; }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-22814448-2']);
@@ -39,68 +14,66 @@
        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
        })();
-</script>
-</head>
+     </script>
+   </head>
 
-<body>
-  <a href="http://github.com/kimoto/spraymaker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+   <body>
+     <a href="http://github.com/kimoto/spraymaker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
-    <div class="download">
-      <!-- -->
-    </div>
-    <h1><a href="http://github.com/kimoto/spraymaker">spraymaker</a> <img src="images/gauss.png"></h1>
+     <div id="container">
+       <div class="download"></div>
+       <h1><a href="http://github.com/kimoto/spraymaker">spraymaker</a> <img src="images/gauss.png"></h1>
 
-    <div class="description">
-      Valveのソースエンジン向けのスプレーを簡単に作成するためのツールです。<br>
-      画像ファイルをドラッグドロップするだけで変換できます。
-    </div>
+       <div class="description">
+         Valveのソースエンジン向けのスプレーを簡単に作成するためのツールです。<br>
+         画像ファイルをドラッグドロップするだけで変換できます。
+       </div>
 
-    <h2>詳細</h2>
-    <ul>
-      <li>256x256サイズのスプレーを生成します</li>
-      <li>透過情報付きのファイルに対応しています</li>
-      <li>高品質の圧縮フォーマットで出力します(BGRA8888)</li>
-      <li>高画質設定のためのVTF Flagsを自動で付加します(NOMOD, NOLOD)</li>
-      <li>200以上の画像形式の読み込みに対応しています(ImageMagickで読み込める画像であればなんでも)</li>
-      <li>元画像のアスペクト比を維持します、その際空いた場所は透過ピクセルで自動で埋めてくれます</li>
-      <li>ディレクトリが指定された場合は再帰的にすべてのファイルを変換します</li>
-    </ul>
+       <h2>詳細</h2>
+       <ul>
+         <li>256x256サイズのスプレーを生成します</li>
+         <li>透過情報付きのファイルに対応しています</li>
+         <li>高品質の圧縮フォーマットで出力します(BGRA8888)</li>
+         <li>高画質設定のためのVTF Flagsを自動で付加します(NOMOD, NOLOD)</li>
+         <li>200以上の画像形式の読み込みに対応しています(ImageMagickで読み込める画像であればなんでも)</li>
+         <li>元画像のアスペクト比を維持します、その際空いた場所は透過ピクセルで自動で埋めてくれます</li>
+         <li>ディレクトリが指定された場合は再帰的にすべてのファイルを変換します</li>
+       </ul>
 
-    <h2>実行例</h2>
-    <p>
-    (transparent)というのが実際には透明な部分になります。
-    </p>
+       <h2>実行例</h2>
+       <p>
+       (transparent)というのが実際には透明な部分になります。
+       </p>
 
-    <!-- example fujisan -->
-    <div style="float: left; margin-right: 20px;">
-      元画像<br>
-      <img src="./images/fujisan.jpg">
-    </div>
-    <div style="float: left; margin-right: 20px;">
-      変換後のVTFファイル<br>
-      <img src="./images/fujisan_vtf.jpg">
-    </div>
+       <!-- example fujisan -->
+       <div style="float: left; margin-right: 20px;">
+         元画像<br>
+         <img src="./images/fujisan.jpg">
+       </div>
+       <div style="float: left; margin-right: 20px;">
+         変換後のVTFファイル<br>
+         <img src="./images/fujisan_vtf.jpg">
+       </div>
 
-    <div style="clear: both;"></div>
+       <div style="clear: both;"></div>
 
-    <!-- ingame review -->
-    <div>
-      ゲーム内<br>
-      <img src="./images/fujisan_ingame.jpg">
-    </div>
+       <!-- ingame review -->
+       <div>
+         ゲーム内<br>
+         <img src="./images/fujisan_ingame.jpg">
+       </div>
 
-    <h2>Download</h2>
-    <ul>
-      <li>
-      Windows7(32/64bit): <a href="http://kimoto29.sakura.ne.jp/misc/spraymaker(20110623).zip">spraymaker(20110623).zip</a><br />
-      他の環境ではテストしていませんが、もしかしたら動くかもしれません。
-      </li>
-    </ul>
+       <h2>ダウンロード</h2>
+       <ul>
+         <li>
+         Windows7(32/64bit): <a href="http://kimoto29.sakura.ne.jp/misc/spraymaker(20110623).zip">spraymaker(20110623).zip</a><br />
+         他の環境ではテストしていませんが、もしかしたら動くかもしれません。
+         </li>
+       </ul>
 
-    <div class="footer">
-      Author: kimoto (peerler at gmail dot com)
-    </div>
-  </div>
-</body>
-</html>
+       <div class="footer">
+         Author: kimoto (peerler at gmail dot com)
+       </div>
+     </div>
+   </body>
+ </html>
