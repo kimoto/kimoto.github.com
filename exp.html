@@ -2,45 +2,21 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Raster</title>
+	<title>!!</title>
 	<script type="text/javascript" src="./lib/paper.js"></script>
 	<script type="text/paperscript" canvas="canvas">
 		var raster = new Raster('exp');
     var center = view.center;
     var lastscale = 1.0;
 
-    function onFrame(event){ // event.time == ページが読み込まれてからの経過時間
-      // sin = -1 ~ 1までの間にマッピングする
-      // +1によって0 - 2までの値にまぷ
-      // / 2によって0 - 1までの間にマップ
-      //alert(event.time);
-
+    function onFrame(event){
       var sign = Math.sin(event.time) + 1; // 0 - 2
       var scale = sign / 2;
-
-      //var scale = Math.sin(event.time);
-      //raster.position = view.center;
-      //raster.rotate(scale * 5);
       raster.rotate(event.time);
-      //raster.scale(scale / lastscale);
-
-			//raster.position = center + [Math.sin(event.time * 3) * 256, Math.sin(event.time * 2.5) * 256];
       raster.position = center + [Math.sin(event.time * scale) * 256 * scale, Math.cos(event.time * scale) * 256 * scale];
 
       lastscale = scale;
     }
-
-    /*
-		var lastScale = 1;
-		var center = view.center;
-		function onFrame(event) {
-			var scale = (Math.sin(event.time * 2) + 1) / 2;
-			raster.scale(scale / lastScale);
-			lastScale = scale;
-			raster.position = center + [Math.sin(event.time * 3) * 256, Math.sin(event.time * 2.5) * 256];
-			raster.rotate(event.delta * 120);
-		}
-    */
 	</script>
 
   <style type="text/css">
@@ -50,9 +26,21 @@
     }
     -->
   </style>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22814448-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+  </script>
 </head>
 <body>
-	<canvas id="canvas" resize></canvas>
-	<img width="512" height="512" id="exp" style="display: none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAAC4CAIAAADfUbGQAAABkklEQVR42u3dsQmDUBiFUSsRBElhoRCwyQrO4zQO4y6ukh0yg7yrSeQcnODnK9/FqgIAAAAAAAAAAAAAAAAAAAAAAAAAAPgl82N6P1+pb380TnpT7RgMZWsdVChCEYpQEApC4Tp1v8dCmdbaQYUiFKEIBaGQ0W2xUMbFOYUiFKEIBaEQ0qyDULgylKGfnVMoQhGKUBAKKUsfCqXvHFMoQhGKUBAKMbHFhlCEYtSDUBAKSaGH+EIRiq0GQkEoCIXrZRYbthpCEQpCQSiERRYbQhGKrQZCQSiERR7iC0UothoIBaEgFL4isNgQilBsNRAKQiEusNgQilBsNRAKQiGv+CG+UIQiFHKhGPUIRSgIhWOKFxtCEYqtBkJBKJyhcLEhFKHYaiAUhMIpCh/iC0UoQiEWiq2GUISCUDiuaLEhFKHYaiAUhMJJihYbQgEAAAAAAAD4d5G/OnnnJhShIBSEglAQCkJBKEIRilAQCkJBKAgFoSAUoQhFKAgFoSAUAAAAAAAAAAAAAAAAAAAAAAAAAOBePqvAPQP8+Y4pAAAAAElFTkSuQmCC" />
+  <canvas id="canvas" resize></canvas>
+  <img width="512" height="512" id="exp" style="display: none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAAC4CAIAAADfUbGQAAABkklEQVR42u3dsQmDUBiFUSsRBElhoRCwyQrO4zQO4y6ukh0yg7yrSeQcnODnK9/FqgIAAAAAAAAAAAAAAAAAAAAAAAAAAPgl82N6P1+pb380TnpT7RgMZWsdVChCEYpQEApC4Tp1v8dCmdbaQYUiFKEIBaGQ0W2xUMbFOYUiFKEIBaEQ0qyDULgylKGfnVMoQhGKUBAKKUsfCqXvHFMoQhGKUBAKMbHFhlCEYtSDUBAKSaGH+EIRiq0GQkEoCIXrZRYbthpCEQpCQSiERRYbQhGKrQZCQSiERR7iC0UothoIBaEgFL4isNgQilBsNRAKQiEusNgQilBsNRAKQiGv+CG+UIQiFHKhGPUIRSgIhWOKFxtCEYqtBkJBKJyhcLEhFKHYaiAUhMIpCh/iC0UoQiEWiq2GUISCUDiuaLEhFKHYaiAUhMJJihYbQgEAAAAAAAD4d5G/OnnnJhShIBSEglAQCkJBKEIRilAQCkJBKAgFoSAUoQhFKAgFoSAUAAAAAAAAAAAAAAAAAAAAAAAAAOBePqvAPQP8+Y4pAAAAAElFTkSuQmCC" />
 </body>
 </html>
