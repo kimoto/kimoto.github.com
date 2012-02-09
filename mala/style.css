@@ -9,6 +9,10 @@ h1{
   font-size: 18px;
 }
 
+.ident{
+  color: red;
+}
+
 #template, #template2{
   display: none;
 }

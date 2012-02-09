@@ -1,3 +1,10 @@
 window.addEventListener("load", function(){
-  document.getElementsByTagName("h1")[0].childNodes[0].textContent = "following";
+  var part = document.getElementsByTagName("h1")[0];
+  part.childNodes[0].textContent = "Net stalker Pro v2.1.2"
+
+  var div = document.createElement('div');
+  div.setAttribute("class", "ident");
+  div.innerHTML = "My name is mala";
+  part.appendChild(div);
 });
+
