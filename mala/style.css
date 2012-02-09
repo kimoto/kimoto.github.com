@@ -1,0 +1,14 @@
+@charset "utf-8"
+body{
+  font-size: 18px;
+  font-family: 'メイリオ',Meiryo,Tahoma,Arial,Verdana,sans-serif;
+  line-height: 180%;
+}
+
+h1{
+  font-size: 18px;
+}
+
+#template, #template2{
+  display: none;
+}
