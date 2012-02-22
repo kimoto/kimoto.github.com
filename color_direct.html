@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>人間が色にO(1)でアクセスできることのテスト</title>
+  <script type="text/javascript">
+    var $ = function(id){
+      return document.getElementById(id);
+    }
+    window.onload = function(){
+      var oh_my_god = 192;
+      var random_index = Math.floor(Math.random() * oh_my_god);
+      for(var i=0; i<oh_my_god; i++){
+        var block = document.createElement('div');
+        if(random_index == i){
+          //block.className = "block";
+          block.className = "highlighted_block";
+        }else{
+          block.className = "block";
+        }
+        $("blocks").appendChild(block);
+      }
+    }
+  </script>
+  <style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
+    body {
+      margin-top: 1.0em;
+      background-color: #FFFFFF;
+      font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+      color: #000;
+      font-style: sans-serif;
+    }
+    div#blocks{
+      width: 800px;
+      height: 500px;
+      float: left;
+    }
+    div.block{
+      background-color: #00FF00;
+      width: 50px;
+      height: 50px;
+      float: left;
+    }
+
+    div.highlighted_block{
+      background-color: #FF0000;
+      width: 50px;
+      height: 50px;
+      float: left;
+    }
+
+    div#blocks:after {
+      clear: both;
+    }
+
+    section {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+	<h1>人間が色にO(1)でアクセスできることのテスト</h1>
+  <div id="blocks">
+  </div>
+  </section>
+</body>
+</html>
