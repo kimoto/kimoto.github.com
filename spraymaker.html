@@ -10,68 +10,68 @@
       _gaq.push(['_trackPageview']);
 
       (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-       })();
-</script>
-</head>
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
 
-<body>
-  <a href="http://github.com/kimoto/spraymaker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <body>
+    <a href="http://github.com/kimoto/spraymaker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
-    <div class="download"></div>
-    <h1><a href="http://github.com/kimoto/spraymaker">spraymaker</a> <img width=64 height=64 src="images/spraymaker.png"></h1>
+    <div id="container">
+      <div class="download"></div>
+      <h1><a href="http://github.com/kimoto/spraymaker">spraymaker</a> <img width=64 height=64 src="images/spraymaker.png"></h1>
 
-    <div class="description">
-      Easy to create high quality VTF file for Valve SourceEngine Games.<br />
-      You can drag &amp; drop any image files to spraymaker.exe<br />
-      <br />
-      English / <a href="./spraymaker_jp.html">Japanese</a>
+      <div class="description">
+        Easy to create high quality VTF file for Valve SourceEngine Games.<br />
+        You can drag &amp; drop any image files to spraymaker.exe<br />
+        <br />
+        English / <a href="./spraymaker_jp.html">Japanese</a>
+      </div>
+
+      <h2>Description</h2>
+      <ul>
+        <li>Output 256 x 256 size spray</li>
+        <li>Output alpha channel VTF file(BGRA8888 = high quality compression type)</li>
+        <li>Add high quality VTF option(NOMAP, NOLOD)</li>
+        <li>Read can 200 over image types</li>
+        <li>Keep original image aspect ratio(auto padding transparent pixel)</li>
+        <li>Read can directory (recursive convertion)</li>
+      </ul>
+
+      <h2>Example</h2>
+      <!-- example fujisan -->
+      <div style="float: left; margin-right: 20px;">
+        Original Image<br>
+        <img src="./images/fujisan.jpg">
+      </div>
+      <div style="float: left; margin-right: 20px;">
+        VTF File<br>
+        <img src="./images/fujisan_vtf.jpg">
+      </div>
+
+      <div style="clear: both;"></div>
+
+      <!-- ingame review -->
+      <div>
+        In game<br>
+        <img src="./images/fujisan_ingame.jpg">
+      </div>
+
+      <h2>Download</h2>
+      <ul>
+        <li>
+        Windows7(32/64bit): <a href="http://kimoto29.sakura.ne.jp/misc/spraymaker(20110623).zip">spraymaker(20110623).zip</a><br />
+        not test other environment. but maybe working.<br />
+        <font color="red">Require: <a href="http://www.imagemagick.org/download/binaries/ImageMagick-6.7.2-5-Q16-windows-dll.exe">ImageMagick Library</a></font>.
+        </li>
+      </ul>
+
+      <div class="footer">
+        Author: kimoto (peerler at gmail dot com)
+      </div>
     </div>
-
-    <h2>Description</h2>
-    <ul>
-      <li>Output 256 x 256 size spray</li>
-      <li>Output alpha channel VTF file(BGRA8888 = high quality compression type)</li>
-      <li>Add high quality VTF option(NOMAP, NOLOD)</li>
-      <li>Read can 200 over image types</li>
-      <li>Keep original image aspect ratio(auto padding transparent pixel)</li>
-      <li>Read can directory (recursive convertion)</li>
-    </ul>
-
-    <h2>Example</h2>
-    <!-- example fujisan -->
-    <div style="float: left; margin-right: 20px;">
-      Original Image<br>
-      <img src="./images/fujisan.jpg">
-    </div>
-    <div style="float: left; margin-right: 20px;">
-      VTF File<br>
-      <img src="./images/fujisan_vtf.jpg">
-    </div>
-
-    <div style="clear: both;"></div>
-
-    <!-- ingame review -->
-    <div>
-      In game<br>
-      <img src="./images/fujisan_ingame.jpg">
-    </div>
-
-    <h2>Download</h2>
-    <ul>
-      <li>
-      Windows7(32/64bit): <a href="http://kimoto29.sakura.ne.jp/misc/spraymaker(20110623).zip">spraymaker(20110623).zip</a><br />
-      not test other environment. but maybe working.<br />
-      <font color="red">Require: <a href="http://www.imagemagick.org/download/binaries/ImageMagick-6.7.2-5-Q16-windows-dll.exe">ImageMagick Library</a></font>.
-      </li>
-    </ul>
-
-    <div class="footer">
-      Author: kimoto (peerler at gmail dot com)
-    </div>
-  </div>
-</body>
+  </body>
 </html>

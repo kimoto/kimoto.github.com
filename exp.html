@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>!!</title>
-	<script type="text/javascript" src="./lib/paper.js"></script>
-	<script type="text/paperscript" canvas="canvas">
-		var raster = new Raster('exp');
-    var center = view.center;
-    var lastscale = 1.0;
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>!!</title>
+    <script type="text/javascript" src="./lib/paper.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+      var raster = new Raster('exp');
+      var center = view.center;
+      var lastscale = 1.0;
 
-    function onFrame(event){
-      var sign = Math.sin(event.time) + 1; // 0 - 2
-      var scale = sign / 2;
-      raster.rotate(event.time);
-      raster.position = center + [Math.sin(event.time * scale) * 256 * scale, Math.cos(event.time * scale) * 256 * scale];
+      function onFrame(event){
+        var sign = Math.sin(event.time) + 1; // 0 - 2
+        var scale = sign / 2;
+        raster.rotate(event.time);
+        raster.position = center + [Math.sin(event.time * scale) * 256 * scale, Math.cos(event.time * scale) * 256 * scale];
 
-      lastscale = scale;
-    }
-	</script>
+        lastscale = scale;
+      }
+    </script>
 
-  <style type="text/css">
-    <!--
-    body{
-      background: black;
-    }
-    -->
-  </style>
+    <style type="text/css">
+      <!--
+      body{
+        background: black;
+      }
+      -->
+    </style>
 
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-22814448-2']);
-    _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22814448-2']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-  </script>
-</head>
-<body>
-  <canvas id="canvas" resize></canvas>
-  <img width="512" height="512" id="exp" style="display: none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAAC4CAIAAADfUbGQAAABkklEQVR42u3dsQmDUBiFUSsRBElhoRCwyQrO4zQO4y6ukh0yg7yrSeQcnODnK9/FqgIAAAAAAAAAAAAAAAAAAAAAAAAAAPgl82N6P1+pb380TnpT7RgMZWsdVChCEYpQEApC4Tp1v8dCmdbaQYUiFKEIBaGQ0W2xUMbFOYUiFKEIBaEQ0qyDULgylKGfnVMoQhGKUBAKKUsfCqXvHFMoQhGKUBAKMbHFhlCEYtSDUBAKSaGH+EIRiq0GQkEoCIXrZRYbthpCEQpCQSiERRYbQhGKrQZCQSiERR7iC0UothoIBaEgFL4isNgQilBsNRAKQiEusNgQilBsNRAKQiGv+CG+UIQiFHKhGPUIRSgIhWOKFxtCEYqtBkJBKJyhcLEhFKHYaiAUhMIpCh/iC0UoQiEWiq2GUISCUDiuaLEhFKHYaiAUhMJJihYbQgEAAAAAAAD4d5G/OnnnJhShIBSEglAQCkJBKEIRilAQCkJBKAgFoSAUoQhFKAgFoSAUAAAAAAAAAAAAAAAAAAAAAAAAAOBePqvAPQP8+Y4pAAAAAElFTkSuQmCC" />
-</body>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <canvas id="canvas" resize></canvas>
+    <img width="512" height="512" id="exp" style="display: none;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALgAAAC4CAIAAADfUbGQAAABkklEQVR42u3dsQmDUBiFUSsRBElhoRCwyQrO4zQO4y6ukh0yg7yrSeQcnODnK9/FqgIAAAAAAAAAAAAAAAAAAAAAAAAAAPgl82N6P1+pb380TnpT7RgMZWsdVChCEYpQEApC4Tp1v8dCmdbaQYUiFKEIBaGQ0W2xUMbFOYUiFKEIBaEQ0qyDULgylKGfnVMoQhGKUBAKKUsfCqXvHFMoQhGKUBAKMbHFhlCEYtSDUBAKSaGH+EIRiq0GQkEoCIXrZRYbthpCEQpCQSiERRYbQhGKrQZCQSiERR7iC0UothoIBaEgFL4isNgQilBsNRAKQiEusNgQilBsNRAKQiGv+CG+UIQiFHKhGPUIRSgIhWOKFxtCEYqtBkJBKJyhcLEhFKHYaiAUhMIpCh/iC0UoQiEWiq2GUISCUDiuaLEhFKHYaiAUhMJJihYbQgEAAAAAAAD4d5G/OnnnJhShIBSEglAQCkJBKEIRilAQCkJBKAgFoSAUoQhFKAgFoSAUAAAAAAAAAAAAAAAAAAAAAAAAAOBePqvAPQP8+Y4pAAAAAElFTkSuQmCC" />
+  </body>
 </html>
